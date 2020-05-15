@@ -87,7 +87,7 @@ dumpcp := {
 Then
 
 ```sh
-node --jvm --vm.cp `cat cp.txt` file.s
+node --jvm --vm.cp `cat cp.txt` file.js
 ```
 
 This will run graaljs on the script `file.js`.

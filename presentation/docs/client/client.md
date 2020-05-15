@@ -66,7 +66,7 @@ There are other tricks. The [`scalajs-fiendly-source-map-loader`](https://www.np
 You only have 2 choices to create a facade:
 
 - Manual: Type in the facades. You can create highly ergonomic APIs this way.
-- Automated: Use an automated tool like [scalblytyped.org](https://scalablytyped.org).
+- Automated: Use an automated tool like [scalablytyped.org](https://scalablytyped.org).
 
 In general, the more scala.js features you pull in the larger the bundle. You can use javascript tools to measure bundle size and see what you are pulling in, but in generally, pulling in scala collections, scala Future, scala printf and libraries like cats or effects libraries like cats-effect and zio pull in large, hard-to-shrink dependencies that may make your scala.js file too large even after pruning and tree-shaking. Server-side is a different issue, you can have large scala.js modules and the size is less important.
 

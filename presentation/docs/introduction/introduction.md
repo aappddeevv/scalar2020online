@@ -6,13 +6,13 @@ sidebar_label: Introduction
 
 "Full-stack" is a bit vague these days because of the blurring between front-end and back-end and the rise of front-end devices with significant compute and IO capabilities.
 
-For any problem, there is a with the wide range of designs and architectures to choose from. A specific choice for your project may take into account facotrs such as:
+For any problem, there is a with the wide range of designs and architectures to choose from. A specific choice for your project may take into account factors such as:
 
 - labor availability
 - prior experiences on what works, i.e., proof-points
 - deployment target
 - audience
-- time-to-makret
+- time-to-market
 - cost
 - ...
 
