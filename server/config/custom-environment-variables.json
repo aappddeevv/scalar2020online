@@ -1,0 +1,10 @@
+{
+  "server": {
+    "host": "HOST",
+    "root": "ROOT",
+    "port": "PORT"
+  },
+  "graphql": {
+    "schemaFile": "GRAPHQL_SCHEMA_FILE"
+  }
+}

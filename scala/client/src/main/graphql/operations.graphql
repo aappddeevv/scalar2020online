@@ -1,0 +1,18 @@
+query authorOp($id: ID!) {
+  author(id: $id) {
+    id
+    name
+    books {
+      id
+      title
+      published
+    }
+  }
+}
+
+query allAuthorsOp {
+  allAuthors {
+    id
+    name
+  }
+}

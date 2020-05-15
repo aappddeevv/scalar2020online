@@ -1,0 +1,43 @@
+---
+id: apps
+title: Apps
+sidebar_label: Apps
+---
+
+import useBaseUrl from "@docusaurus/useBaseUrl";
+
+"App" deployment targets usually fall into one of a few buckets:
+
+- Mobile device: Small form factor and other constraints
+- Browser: Running on the desktop and can be mobile device browser based.
+  - Includes variants that are browser based but look native desktop, e.g., electron, PWA,
+- Native desktop: Tied to an OS such is Windows 10, macOS.
+
+While native apps are critical for mobile devices and the dominant way that consumers interact with the internet these days, browser based apps are still quite popular, including browsers on mobile devices.
+
+Popular choices for the front-end and back-end technologies are:
+
+- browser
+  - HTML, CSS, JS deployed in various design such as PWA, SPA, multi-page/server, etc.
+- server
+  - There are dozens of large frameworks, PLs, libraries and things that you probably do not know even exist
+
+While you can argue about quality, scalability, reliability and a host of other factors with above choices, sometimes you target environments that are suboptimal.
+
+Some popular specific choices that are quite common include:
+
+- browser: typescript, SPA or MPA (multi-page app)
+- server: nodejs, express, graphql (say via apollo graphql)
+
+A javascript based stack is:
+
+- Popular
+- Easy to start with (great for new developers)
+- Wide ecosystem
+- Continues to gain ground.
+
+A JS approach can take you quite up the "# of users/complexity" ladder and you can use external-to-the-platform to scale, e.g., scale out vs scale up.
+
+While the abvoe may not be the best for facebook-sized deployments, not all problems are not facebook-sized problems.
+
+<img alt="Architecture" src={useBaseUrl("presentation/scaling.png")} />

@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    //"noImplicitAny": true,
+    "noImplicitReturns": true,
+    "strictNullChecks": true,
+    "allowJs": true,
+    "importHelpers": true,
+    "noEmitHelpers": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": false,
+    "allowSyntheticDefaultImports": true,
+    "inlineSourceMap": false,
+    "sourceMap": true,
+    "preserveSymlinks": false,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "target": "es2015",
+    "module": "commonjs"
+  },
+  "exclude": ["../src/**/*.spec.ts", "../src/**/*.test.ts", "../src/**/*.spec.js", "../src/**/*.test.js"],
+  "include": ["../src/**/*"]
+}

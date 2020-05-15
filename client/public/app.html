@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>App</title>
+    <style>
+      .noscript {
+        width: 100%;
+        height: 100%;
+        z-index: 10000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .load-error {
+        width: 100%;
+        height: 100%;
+        z-index: 10000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: lavenderblush;
+      }
+      #div100 {
+        display: block;
+        background-color: lavenderblush;
+      }
+      #container {
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        bottom: 0px;
+        overflow: hidden;
+        margin: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      window.addEventListener("load", () => {
+        try {
+          // "App" must match the webpack output config. Our config exports a var called "App."
+          App.main()
+        } catch (e) {
+          console.error("Error starting app", e)
+          const el = document.getElementById("root")
+          const content = document.createTextNode(
+            "There was an error loading the application. Please try reloading (refresh browser tab) or report this event to someone."
+          )
+          el.classList.add("load-error")
+          el.appendChild(content)
+        }
+      })
+    </script>
+    <noscript>
+      <div id="div100">
+        Please enable javascript in this browser.
+      </div>
+    </noscript>
+  </body>
+</html>

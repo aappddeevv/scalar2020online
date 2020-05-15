@@ -1,0 +1,9 @@
+build
+declarations
+.awcache
+src/generated
+node_modules
+src/**/*.js
+src/**/*.js.map
+.scala-js-sources
+

@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "noEmitOnError": false,
+    "jsx": "react",
+    "outDir": "dist",
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "declaration": true,
+    "declarationDir": "declarations",
+    "removeComments": true,
+    "noImplicitReturns": true,
+    "allowJs": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "target": "es5",
+    "module": "commonjs",
+    "baseUrl": "."
+  },
+  "include": ["src/**/*"],
+  "exclude": ["src/public/"]
+}

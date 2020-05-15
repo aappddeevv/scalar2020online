@@ -1,0 +1,11 @@
+target
+project
+*~
+metals*
+generated.scala
+package.json
+node_modules
+out
+generated_docs
+.scala-js-sources
+.bloop

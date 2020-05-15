@@ -1,0 +1,3 @@
+{
+  server: { publicPath: "/app", servePath: "/public" },
+}

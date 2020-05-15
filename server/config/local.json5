@@ -1,0 +1,7 @@
+{
+  server: {
+    port: 3001,
+    secure: false,
+    publicPath: "/",
+  },
+}

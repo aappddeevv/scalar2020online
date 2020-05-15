@@ -1,0 +1,22 @@
+{
+  server: {
+    // Should *not* have a trailing slash so root => empty string.
+    publicPath: "",
+    // Should *not* have a trailing slash so root => empty string.
+    servePath: "",
+    port: 8080,
+    host: "0.0.0.0",
+    root: "/",
+  },
+  // You would really store the credentials elsewhere.
+  yourdbconfig: {
+    user: "user",
+    password: "password",
+    server: "localhost",
+    database: "database",
+  },
+  graphql: {
+    // relative to where it is included in the source code
+    schemaFile: "schema.graphql",
+  },
+}

@@ -1,0 +1,37 @@
+overwrite: true
+schema: ../server/src/schema.graphql
+documents:
+  - ../client/src/graphql/*.graphql
+  - ./client/src/main/graphql/*.graphql
+config:
+  scalars:
+    Plot: js.Object
+    JSON: String
+    JSONObject: js.Object
+hooks:
+  afterOneFileWrite:
+    - scalafmt
+generates:
+  client/target/scala-2.13/src_managed/main/cli_codegen/graphql.scala:
+    plugins:
+      - "@aappddeevv/graphql-codegen-scala-operations"
+      - add: "// DO NOT EDIT - automatically generated, edits will be lost"
+      - add: "package app\npackage client\npackage graphql"
+    config:
+      gqlImport: "apollo_boost._#gql"
+      addTypename: "always"
+      addGenericConversionExtensionMethod: "app.client.graphql.schema"
+  client/target/scala-2.13/src_managed/main/cli_codegen/graphql-schema.scala:
+    plugins:
+      - "@aappddeevv/graphql-codegen-scala-schema"
+      - add: "// DO NOT EDIT - automatically generated, edits will be lost"
+      - add: "package app\npackage client\npackage graphql\npackage schema"
+    config:
+      addTypename: "always"
+      includeSchemaGenerics: true
+  server/target/scala-2.13/src_managed/main/cli_codegen/graphql.scala:
+    config:
+    plugins:
+      - "@aappddeevv/graphql-codegen-scala-schema"
+      - add: "// DO NOT EDIT - automatically generated, edits will be lost"
+      - add: "package app\npackage graphql\npackage server\npackage schema"

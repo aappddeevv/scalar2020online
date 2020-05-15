@@ -1,0 +1,4 @@
+2020.05.15 14:42:18 INFO  started: Metals version 0.9.0 in workspace '/home/glampshire/proj/analysis/scalar2020online/server'
+2020.05.15 14:42:22 INFO  time: initialize in 3.63s
+2020.05.15 14:42:23 WARN  no build tool detected in workspace '/home/glampshire/proj/analysis/scalar2020online/server'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.05.15 16:22:19 INFO  shutting down Metals

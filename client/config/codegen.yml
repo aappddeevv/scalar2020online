@@ -1,0 +1,25 @@
+# client apollo graphql generation
+overwrite: true
+schema: ../server/src/schema.graphql
+documents: "src/graphql/operations.graphql"
+generates:
+  src/generated/graphql.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-document-nodes
+      - typescript-react-apollo
+    config:
+      withComponent: false
+      withHOC: false
+      withHooks: true
+      withMutationFn: true
+      reactApolloVersion: 2
+#config:
+#  scalars:
+#    JSON: String
+#
+#hooks:
+#  afterOneFileWrite:
+#    - scalafmt
+

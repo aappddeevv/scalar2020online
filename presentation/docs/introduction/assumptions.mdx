@@ -1,0 +1,70 @@
+---
+id: assumptions
+title: Assumptions
+sidebar_label: Assumptions
+---
+
+import useBaseUrl from "@docusaurus/useBaseUrl";
+
+Let's assume you are a scala-oriented person, you have to fit into an existing project but are allowed to start broadening the tech stack.
+
+If you have an existing app solution as described in the last section, you may need to stact modifying it for new requirements.
+You probably can't throw everything away and start fresh and it may be too complex or too much work to make yet another micro-service backend to gateway
+into as micro-services have their own complexity to deal with.
+
+Let's assume you can use scala/scala.js to extend an existing app.
+
+1. What would that would that look like?
+2. Why would you do that?
+
+The rest of the presentation will focus on the question 1.
+
+## Management Speaking Points
+
+Typically, answers to question 2 include:
+
+- Leverage scala-based skills, labor and libraries that already solve problems and deploy them to my js environment rather easily.
+  - I can build on what's there.
+- The maintenance cost of the existing app is increasing every year and I need to start evolving it to lower maintenance costs. While some may not about
+  Functional Programming (FP) as a "thing."
+  - scala seems like it could be more disciplined and there's alot of builtin support for immutability, currying, effects as values, etc.
+- Current app is _not_ economic to rewrite and there is not enough budget for that anyway.
+  - The incremental cost of fixing a few things may be good enough and cheaper than replacing it.
+- I'm a new manager and I really had some bad experiences with typescript and pure js projects. The team could
+  never write enough tests to feel that the application would not crash at some point. Ugh...let's start changing it with something different.
+  - I heard about reasonml but ocaml is even more obtuse than scala, let's try scala.
+
+:::tip
+Gradual adoption is usually more believable and friendly when using a non-quantitative "time-to-market" and "lower costs" justification storyline.
+:::
+
+Skipping security and coding the happing path, we can put together a project to see what interop might look like.
+
+## Example Application Architecture
+
+Here's the overall application architecture. Everything is minimized to clearly show interop and make it self-contained:
+
+<img alt="Architecture" src={useBaseUrl("presentation/architecture.png")} />
+
+## Interop Requires Config and Config is Hard
+
+Build config is hard to get right.
+
+Using a mixed project makes it harder but not overly difficult.
+
+If you are working your way into an existing project, the incremental config is quite easy.
+
+If you are targeting a javascript project, it is best to have a knowledgeable javascript platform resource that can help work through the config.
+Some of the capabilties of JVM platforms, such as packages and "modules are not files" are not true in the javascript world.
+
+Creating configuration for a full stack application from the start in a mixed language project is already difficult in the javascript world due to:
+
+- Tools that only address parts of the configuration process.
+- Tools that overlap in their functionality, sometimes heavily.
+- Tool integration is mostly performed adhocly by a tool itself or through common "paths" and env. vars. leading to brittleness.
+
+No silver bullet to solve these problems and its rapidly evolving mess.
+
+## Interop Config Leverages Multiple Tools - Yup It's harder
+
+<img alt="Architecture" src={useBaseUrl("presentation/project_setup.png")} />
